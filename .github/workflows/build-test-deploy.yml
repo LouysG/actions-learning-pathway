@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-      - run: npm install
-      - run: npx next lint --no-interactive
+      - run: npm ci
+      - run: npx next lint
 
   test:
     needs: [build, lint]
